@@ -11,4 +11,19 @@ package caballerosdesangre;
  */
 public class CentroMandoCaballeros {
     
+    private static CentroMandoCaballeros hq;
+
+    private CentroMandoCaballeros() {
+    }
+    
+    public static CentroMandoCaballeros getInstance() {
+        if (hq == null) {
+            hq = new CentroMandoCaballeros();
+        }
+        return hq;
+    }
+    
+        
+    
+    
 }
