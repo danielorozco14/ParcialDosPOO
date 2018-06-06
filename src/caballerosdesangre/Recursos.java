@@ -69,20 +69,20 @@ public class Recursos implements InterfazCaballeros {
     }
 
     @Override
-    public Paladin CrearPaladin() {
+    public Serafin CrearPaladin() {
         return null;
     }
 
     @Override
-    public void EntrenarPaladin(Paladin paladin) {
+    public void EntrenarPaladin(Serafin paladin) {
     }
 
     @Override
-    public void AtacarPaladin(Paladin paladin) {
+    public void AtacarPaladin(Serafin paladin) {
     }
 
     @Override
-    public void DefenderPaladin(Paladin paladin) {
+    public void DefenderPaladin(Serafin paladin) {
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Recursos implements InterfazCaballeros {
     }
 
     @Override
-    public void RecolectarPaladin(Paladin paladin) {
+    public void RecolectarPaladin(Serafin paladin) {
     }
 ////////////////////////////////////////////////////////////////////////////////
 

@@ -10,7 +10,7 @@ package caballerosdesangre;
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public class CentroMandoCaballeros {
-    
+    private static int vidaHQ;
     private static CentroMandoCaballeros hq;
 
     private CentroMandoCaballeros() {
@@ -23,6 +23,18 @@ public class CentroMandoCaballeros {
         return hq;
     }
     
+    public void Operaciones(){
+        
+        System.out.println("---------------------------------------");
+        System.out.println("| 1. Creacion de Milicia              |");
+        System.out.println("| 2. Creacion de Recursos             |");
+        System.out.println("|\t\t\t\t      |");
+        System.out.println("|\t\t\t\t      |");
+        System.out.println("|\t\t\t\t      |");
+        System.out.println("|\t\t\t\t      |");
+        System.out.println("---------------------------------------");
+        
+    }
         
     
     

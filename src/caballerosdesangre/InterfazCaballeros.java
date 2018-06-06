@@ -16,13 +16,13 @@ public interface InterfazCaballeros {
     void Atacar(Caballeros caballero,int vidaEnemiga);
     void Defender(Caballeros caballero,int vidaAliada);
     
-    Paladin CrearPaladin();
-    void EntrenarPaladin(Paladin paladin);
-    void AtacarPaladin(Paladin paladin);
-    void DefenderPaladin(Paladin paladin);
+    Serafin CrearPaladin();
+    void EntrenarPaladin(Serafin paladin);
+    void AtacarPaladin(Serafin paladin);
+    void DefenderPaladin(Serafin paladin);
     
     void RecolectarCaballero(Caballeros caballero);
-    void RecolectarPaladin(Paladin paladin);
+    void RecolectarPaladin(Serafin paladin);
     
     void CrearRecursos(int a);
     
