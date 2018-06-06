@@ -71,7 +71,7 @@ public class Caballeros  implements InterfazCaballeros  {
 
     @Override
     public void RecolectarCaballero(Caballeros caballero) {
-        if ((caballero instanceof Caballeros)== true) {
+        if (caballero instanceof Caballeros) {
             System.out.println("RECOLECTANDO MILICIA!!");
             for (int i = 1; i <= 5; i++) {
                 try {
@@ -149,19 +149,19 @@ public class Caballeros  implements InterfazCaballeros  {
     }
 
     @Override
-    public void RecolectarMadera(RecursoMadera madera) {
+    public void CrearRecursos(int a) {
     }
 
     @Override
-    public void RecolectarOrbes(RecursoOrbesLuz orbes) {
+    public void RecolectarMadera(int cantidadMadera) {
     }
 
     @Override
-    public void RecolectarOro(RecursoOro oro) {
+    public void RecolectarOrbes(int cantidadOrbes) {
     }
 
     @Override
-    public void CrearRecursos() {
+    public void RecolectarOro(int cantidadOro) {
     }
 
 }
