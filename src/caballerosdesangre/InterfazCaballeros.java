@@ -24,8 +24,9 @@ public interface InterfazCaballeros {
     void RecolectarCaballero(Caballeros caballero);
     void RecolectarPaladin(Paladin paladin);
     
-    void CrearRecursos();
-    void RecolectarMadera(RecursoMadera madera);
-    void RecolectarOrbes(RecursoOrbesLuz orbes);
-    void RecolectarOro(RecursoOro oro);
+    void CrearRecursos(int a);
+    
+    void RecolectarMadera(int cantidadMadera);
+    void RecolectarOrbes(int cantidadOrbes);
+    void RecolectarOro(int cantidadOro);
 }
