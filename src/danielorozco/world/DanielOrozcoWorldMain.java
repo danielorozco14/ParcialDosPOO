@@ -4,18 +4,21 @@
  * and open the template in the editor.
  */
 package danielorozco.world;
+import caballerosdesangre.*;
 
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
-public class DanielOrozcoWorld {
+public class DanielOrozcoWorldMain {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Caballeros caballero=new Caballeros();
+        caballero.Crear();        
+        caballero.Atacar(caballero, caballero.getPuntosAtaque());
+        
+              
     }
-    
+
 }
