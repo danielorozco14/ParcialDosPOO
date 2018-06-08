@@ -5,10 +5,12 @@
  */
 package danielorozco.world;
 
+import caballerosdesangre.InterfazCaballeros;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public interface AbstractFactory {
-    
+    InterfazCaballeros getOperacion(int type);
 }

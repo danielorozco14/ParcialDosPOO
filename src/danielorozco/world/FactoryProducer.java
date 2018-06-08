@@ -5,10 +5,15 @@
  */
 package danielorozco.world;
 
+import caballerosdesangre.FactoryCaballerosDeSangre;
+import caballerosdesangre.InterfazCaballeros;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public class FactoryProducer {
-    
+    public static AbstractFactory getFactory(int type){
+        return new FactoryCaballerosDeSangre();       
+    }
 }

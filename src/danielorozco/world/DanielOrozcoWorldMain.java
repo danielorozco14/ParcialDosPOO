@@ -18,7 +18,7 @@ public class DanielOrozcoWorldMain {
 //        caballero.Crear();        
 //        caballero.Atacar(caballero, caballero.getPuntosAtaque());
         CentroMandoCaballeros cab= CentroMandoCaballeros.getInstance();
-        cab.Operaciones();
+        cab.OperacionesJugadorUno();
               
     }
 
