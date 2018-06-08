@@ -127,26 +127,6 @@ public class Caballeros  implements InterfazCaballeros  {
 
     }
 
-    @Override
-    public Serafin CrearPaladin() {
-        return null;
-    }
-
-    @Override
-    public void EntrenarPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void AtacarPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void DefenderPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void RecolectarPaladin(Serafin paladin) {
-    }
 
     @Override
     public void CrearRecursos(int a) {
@@ -162,6 +142,27 @@ public class Caballeros  implements InterfazCaballeros  {
 
     @Override
     public void RecolectarOro(int cantidadOro) {
+    }
+
+    @Override
+    public Serafin CrearSerafin() {
+        return null;
+    }
+
+    @Override
+    public void EntrenarSerafin(Serafin paladin) {
+    }
+
+    @Override
+    public void AtacarSerafin(Serafin paladin) {
+    }
+
+    @Override
+    public void DefenderSerafin(Serafin paladin) {
+    }
+
+    @Override
+    public void RecolectarSerafin(Serafin serafin) {
     }
 
 }

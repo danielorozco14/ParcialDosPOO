@@ -53,10 +53,10 @@ public class Serafin implements InterfazCaballeros {
     }
 
     @Override
-    public Serafin CrearPaladin() {
+    public Serafin CrearSerafin() {
         //AQUI VA EL CODIGO PARA CREAR A LOS CABALLEROS
-        System.out.println("CREANDO PALADIN ESPERE 25 SEGUNDOS");
-        System.out.println("\t\tCreando Paladin!! ");
+        System.out.println("CREANDO SERAFIN ESPERE 25 SEGUNDOS");
+        System.out.println("\t\tCreando Serafin!! ");
         Serafin paladin = new Serafin();
         for (int i = 1; i < 25; i++) {
             while (i <= 10) {
@@ -76,14 +76,14 @@ public class Serafin implements InterfazCaballeros {
 
         setVidaSerafin(10000);
         setPuntosAtaque(1036);
-        System.out.println("\nPALADIN CREADO CON EXITO!!\n\n");
+        System.out.println("\nSERAFIN CREADO CON EXITO!!\n\n");
         return paladin;
     }
     
     @Override
-    public void RecolectarPaladin(Serafin paladin) {
-        if (paladin instanceof Serafin) {
-            System.out.println("RECOLECTANDO PALADIN!!");
+    public void RecolectarSerafin(Serafin serafin) {
+        if (serafin instanceof Serafin) {
+            System.out.println("RECOLECTANDO SERAFIN!!");
             for (int i = 1; i <= 5; i++) {
                 try {
                     Thread.sleep(500);
@@ -91,7 +91,7 @@ public class Serafin implements InterfazCaballeros {
 
                 }
             }
-            AlmacenSerafin.add(paladin);
+            AlmacenSerafin.add(serafin);
         } else {
             System.out.println("Aun no se han creado Caballeros para poder recolectar");
         }
@@ -99,12 +99,12 @@ public class Serafin implements InterfazCaballeros {
 
 
     @Override
-    public void EntrenarPaladin(Serafin paladin) {
-        if (paladin instanceof Serafin) {
-            System.out.println("Se ha seleccionado un Paladin,"
+    public void EntrenarSerafin(Serafin serafin) {
+        if (serafin instanceof Serafin) {
+            System.out.println("Se ha seleccionado un Serafin,"
                     + "se procedera a entrenarlo y ponerlo en el arrayList");
-            System.out.println("PALADIN EN ENTRENAMIENTO");
-            System.out.println("Entrenando Paladin...Espere 20 segundos ");
+            System.out.println("SERAFIN EN ENTRENAMIENTO");
+            System.out.println("Entrenando Serafin...Espere 20 segundos ");
             for (int i = 1; i < 20; i++) {
                 while (i <= 10) {
                     System.out.print("Entrenando...");
@@ -120,26 +120,26 @@ public class Serafin implements InterfazCaballeros {
                 }
             }
 
-            System.out.println("\nUNIDAD DE PALADIN ENTRENADA CON EXITO!!");
+            System.out.println("\nUNIDAD DE SERAFIN ENTRENADA CON EXITO!!");
             //ArrayListDeCaballerosEntrenados.add(caballlero);
         } else {
-            System.out.println("Aun no se ha creado un Paladin para poder ENTRENAR");
+            System.out.println("Aun no se ha creado un Serafin para poder ENTRENAR");
         }
     }
 
     @Override
-    public void AtacarPaladin(Serafin paladin) {
+    public void AtacarSerafin(Serafin serafin) {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if (paladin instanceof Serafin) {
+        if (serafin instanceof Serafin) {
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
-            System.out.println("Paladin Atacando!!!");
+            System.out.println("Serafin Atacando!!!");
             //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
         }
     }
 
     @Override
-    public void DefenderPaladin(Serafin paladin) {
-         System.out.println("Unidad de Paladin Defendiendo!!!");
+    public void DefenderSerafin(Serafin serafin) {
+         System.out.println("Unidad de Serafin Defendiendo!!!");
         //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
     }
 

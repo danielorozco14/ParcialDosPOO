@@ -23,19 +23,35 @@ public class CentroMandoCaballeros {
         return hq;
     }
     
-    public void Operaciones(){
+    public void OperacionesJugadorUno(){
         
+        System.out.println("---------------------------------------");
+        System.out.println("|              Jugador 1              |");
         System.out.println("---------------------------------------");
         System.out.println("| 1. Creacion de Milicia              |");
         System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("|\t\t\t\t      |");
-        System.out.println("|\t\t\t\t      |");
-        System.out.println("|\t\t\t\t      |");
-        System.out.println("|\t\t\t\t      |");
+        System.out.println("| 3. Recoleccion de Recursos          |");
+        System.out.println("| 4. Recoleccion de Milicia           |");
+//        System.out.println("|\t\t\t\t      |");
+//        System.out.println("|\t\t\t\t      |");
         System.out.println("---------------------------------------");
         
     }
         
-    
+    public void OperacionesJugadorDos(){
+        
+        System.out.println("---------------------------------------");
+        System.out.println("|              Jugador 2              |");
+        System.out.println("---------------------------------------");
+        System.out.println("| 1. Creacion de Milicia              |");
+        System.out.println("| 2. Creacion de Recursos             |");
+        System.out.println("| 3. Recoleccion de Recursos          |");
+        System.out.println("| 4. Recoleccion de Milicia           |");
+//        System.out.println("|\t\t\t\t      |");
+//        System.out.println("|\t\t\t\t      |");
+        System.out.println("---------------------------------------");
+        
+    }
+        
     
 }

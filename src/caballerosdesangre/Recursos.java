@@ -68,30 +68,7 @@ public class Recursos implements InterfazCaballeros {
     public void Defender(Caballeros caballero, int vidaAliada) {
     }
 
-    @Override
-    public Serafin CrearPaladin() {
-        return null;
-    }
-
-    @Override
-    public void EntrenarPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void AtacarPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void DefenderPaladin(Serafin paladin) {
-    }
-
-    @Override
-    public void RecolectarCaballero(Caballeros caballero) {
-    }
-
-    @Override
-    public void RecolectarPaladin(Serafin paladin) {
-    }
+    
 ////////////////////////////////////////////////////////////////////////////////
 
     @Override
@@ -127,6 +104,36 @@ public class Recursos implements InterfazCaballeros {
     @Override
     public void RecolectarOro(int cantidadOro) {
         RecursosOro.add(cantidadOro);
+    }
+
+    @Override
+    public Serafin CrearSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void EntrenarSerafin(Serafin paladin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AtacarSerafin(Serafin paladin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DefenderSerafin(Serafin paladin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarCaballero(Caballeros caballero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarSerafin(Serafin serafin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

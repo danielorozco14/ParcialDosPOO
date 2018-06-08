@@ -5,10 +5,19 @@
  */
 package caballerosdesangre;
 
+import danielorozco.world.AbstractFactory;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
-public class FactoryCaballerosDeSangre {
+public class FactoryCaballerosDeSangre implements AbstractFactory {
+
+    @Override
+    public InterfazCaballeros getOperacion(int type) {
+        //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA CABALLEROS 
+        //CREAR MILICIA,RECOLECTAR RECURSOS,ETC
+        return null;
+    }
     
 }
