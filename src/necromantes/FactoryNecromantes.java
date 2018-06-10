@@ -5,10 +5,33 @@
  */
 package necromantes;
 
+import caballerosdesangre.InterfazCaballeros;
+import danielorozco.world.AbstractFactory;
+import orcos.InterfazOrcos;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
-public class FactoryNecromantes {
+public class FactoryNecromantes implements AbstractFactory{
+
+    @Override
+    public InterfazCaballeros getCaballero(int type) {
+        return null;
+    }
+
+    @Override
+    public InterfazOrcos getOrcos(int type) {
+        return null;
+    }
+
+    @Override
+    public InterfazNecromantes getNecromantes(int type) {
+        //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA CABALLEROS 
+        //CREAR MILICIA,RECOLECTAR RECURSOS,ETC(return Caballeros(),return Serafin();
+        return null;
+    }
+
+    
     
 }
