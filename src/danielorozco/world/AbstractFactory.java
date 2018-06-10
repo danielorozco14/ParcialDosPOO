@@ -6,11 +6,15 @@
 package danielorozco.world;
 
 import caballerosdesangre.InterfazCaballeros;
+import necromantes.InterfazNecromantes;
+import orcos.InterfazOrcos;
 
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public interface AbstractFactory {
-    InterfazCaballeros getOperacion(int type);
+    InterfazCaballeros getCaballero(int type);
+    InterfazOrcos getOrcos(int type);
+    InterfazNecromantes getNecromantes(int type);
 }

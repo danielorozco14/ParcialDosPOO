@@ -6,14 +6,25 @@
 package danielorozco.world;
 
 import caballerosdesangre.FactoryCaballerosDeSangre;
-import caballerosdesangre.InterfazCaballeros;
+import necromantes.FactoryNecromantes;
+import orcos.FactoryOrcos;
 
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public class FactoryProducer {
-    public static AbstractFactory getFactory(int type){
-        return new FactoryCaballerosDeSangre();       
+
+    public static AbstractFactory getFactory(int type) {
+        switch (type) {
+            case 1:
+                return new FactoryCaballerosDeSangre();
+            case 2:
+                return new FactoryNecromantes();
+            case 3:
+                return new FactoryOrcos();
+        }
+        return null;
+
     }
 }
