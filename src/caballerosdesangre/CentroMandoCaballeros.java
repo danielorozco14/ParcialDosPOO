@@ -5,6 +5,8 @@
  */
 package caballerosdesangre;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
@@ -12,7 +14,17 @@ package caballerosdesangre;
 public class CentroMandoCaballeros {
     private static int vidaHQ;
     private static CentroMandoCaballeros hq;
+    public int type;
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+    
+    
     private CentroMandoCaballeros() {
     }
     
@@ -22,36 +34,4 @@ public class CentroMandoCaballeros {
         }
         return hq;
     }
-    
-    public void OperacionesJugadorUno(){
-        
-        System.out.println("---------------------------------------");
-        System.out.println("|              Jugador 1              |");
-        System.out.println("---------------------------------------");
-        System.out.println("| 1. Creacion de Milicia              |");
-        System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Recoleccion de Recursos          |");
-        System.out.println("| 4. Recoleccion de Milicia           |");
-//        System.out.println("|\t\t\t\t      |");
-//        System.out.println("|\t\t\t\t      |");
-        System.out.println("---------------------------------------");
-        
-    }
-        
-    public void OperacionesJugadorDos(){
-        
-        System.out.println("---------------------------------------");
-        System.out.println("|              Jugador 2              |");
-        System.out.println("---------------------------------------");
-        System.out.println("| 1. Creacion de Milicia              |");
-        System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Recoleccion de Recursos          |");
-        System.out.println("| 4. Recoleccion de Milicia           |");
-//        System.out.println("|\t\t\t\t      |");
-//        System.out.println("|\t\t\t\t      |");
-        System.out.println("---------------------------------------");
-        
-    }
-        
-    
-}
+}  
