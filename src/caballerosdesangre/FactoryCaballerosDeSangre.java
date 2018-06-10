@@ -6,6 +6,7 @@
 package caballerosdesangre;
 
 import danielorozco.world.AbstractFactory;
+import java.util.Scanner;
 import necromantes.InterfazNecromantes;
 import orcos.InterfazOrcos;
 
@@ -20,6 +21,30 @@ public class FactoryCaballerosDeSangre implements AbstractFactory {
     public InterfazCaballeros getCaballero(int type) {
         //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA CABALLEROS 
         //CREAR MILICIA,RECOLECTAR RECURSOS,ETC(return Caballeros(),return Serafin();
+        
+        switch(type){
+            case 1:
+                return new Caballeros();
+            case 2:
+                return new Recursos();
+            default:
+                System.out.println("Opcion equivocada");
+        }
+      
+//        Scanner opciones1=new Scanner(System.in);
+//        System.out.println("---------------------------------------");
+//        System.out.println("|              Jugador 1              |");
+//        System.out.println("---------------------------------------");
+//        System.out.println("| 1. Creacion de Caballero            |");
+//        System.out.println("| 2. Creacion de Paladin              |");
+//        System.out.println("| 3. Creacion de Recursos             |");
+//        System.out.println("| 4. Recoleccion de Recursos          |");
+//        System.out.println("| 5. Recoleccion de Milicia           |");
+////        System.out.println("|\t\t\t\t      |");
+////        System.out.println("|\t\t\t\t      |");
+//        System.out.println("---------------------------------------");
+//        type=opciones1.nextInt();
+    
         return null;
     }
 
