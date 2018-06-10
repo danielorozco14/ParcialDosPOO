@@ -13,13 +13,8 @@ import caballerosdesangre.*;
 public class DanielOrozcoWorldMain {
 
     public static void main(String[] args) {
-
-//        Caballeros caballero=new Caballeros();
-//        caballero.Crear();        
-//        caballero.Atacar(caballero, caballero.getPuntosAtaque());
-        CentroMandoCaballeros cab= CentroMandoCaballeros.getInstance();
-        cab.OperacionesJugadorUno();
-              
+          MenuJuego juego=new MenuJuego();
+          juego.InicioJuego();
     }
 
 }
