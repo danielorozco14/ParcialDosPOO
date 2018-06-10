@@ -25,7 +25,7 @@ public class Caballeros  implements InterfazCaballeros  {
         return puntosAtaque;
     }
 
-    public void setPuntosAtaque(int puntosAtaque) {
+    public static void setPuntosAtaque(int puntosAtaque) {
         Caballeros.puntosAtaque = puntosAtaque;
     }
 
@@ -34,7 +34,7 @@ public class Caballeros  implements InterfazCaballeros  {
     }
 
     public void setVidaCaballero(int vida) {
-        this.vidaCaballero = vida;
+        Caballeros.vidaCaballero = vida;
     }
 
     public Caballeros() {

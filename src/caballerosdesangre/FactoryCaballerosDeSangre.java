@@ -6,6 +6,8 @@
 package caballerosdesangre;
 
 import danielorozco.world.AbstractFactory;
+import necromantes.InterfazNecromantes;
+import orcos.InterfazOrcos;
 
 /**
  *
@@ -13,11 +15,22 @@ import danielorozco.world.AbstractFactory;
  */
 public class FactoryCaballerosDeSangre implements AbstractFactory {
 
+
     @Override
-    public InterfazCaballeros getOperacion(int type) {
+    public InterfazCaballeros getCaballero(int type) {
         //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA CABALLEROS 
-        //CREAR MILICIA,RECOLECTAR RECURSOS,ETC
+        //CREAR MILICIA,RECOLECTAR RECURSOS,ETC(return Caballeros(),return Serafin();
         return null;
+    }
+
+    @Override
+    public InterfazOrcos getOrcos(int type) {
+        return null;
+    }
+
+    @Override
+    public InterfazNecromantes getNecromantes(int type) {
+            return null;
     }
     
 }
