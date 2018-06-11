@@ -14,17 +14,7 @@ import java.util.Scanner;
 public class CentroMandoCaballeros {
     private static int vidaHQ;
     private static CentroMandoCaballeros hq;
-    public int type;
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-    
-    
+   
     private CentroMandoCaballeros() {
     }
     
@@ -34,4 +24,10 @@ public class CentroMandoCaballeros {
         }
         return hq;
     }
+    
+    public void CentroMandoCaballero(){
+        
+        
+    }
+    
 }  

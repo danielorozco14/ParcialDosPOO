@@ -62,12 +62,15 @@ public class Recursos implements InterfazCaballeros {
         
         switch (a) {
             case 1:
+                System.out.println("Creando recursos de madera");
                 setCantidadMadera(cantidadMadera+15);
                 break;
             case 2:
+                System.out.println("Creando recursos de Orbes");
                 setCantidadOrbes(cantidadOrbes+15);
                 break;
             case 3:
+                System.out.println("Creando recursos de oro");
                 setCantidadOro(cantidadOro+15);
                 break;
             default:
@@ -111,21 +114,21 @@ public class Recursos implements InterfazCaballeros {
 
     @Override
     public boolean ComprobarObjetos() {
-//        int cont = 0, cont1 = 0;
-//
-//        for (Integer RecursosMadera1 : RecursosMadera) {
-//            if (RecursosMadera.contains(15) && cont == 0) {
-//                return true;
-//            } else if (RecursosMadera.contains(15) && cont != 0) {
-//                return true;
-//            } else if (RecursosMadera.contains(15) == false) {
-//                cont1++;
-//                if (RecursosMadera.size() == cont1) {
-//                    System.out.println("NO HAY RECURSOS DE MADERA");
-//                }
-//            }
-//            cont++;
-//        }
+        int cont = 0, cont1 = 0;
+
+        for (Integer RecursosMadera1 : RecursosMadera) {
+            if (RecursosMadera.contains(15) && cont == 0) {
+                return true;
+            } else if (RecursosMadera.contains(15) && cont != 0) {
+                return true;
+            } else if (RecursosMadera.contains(15) == false) {
+                cont1++;
+                if (RecursosMadera.size() == cont1) {
+                    System.out.println("NO HAY RECURSOS DE MADERA");
+                }
+            }
+            cont++;
+        }
         return false;
     }
 

@@ -47,7 +47,7 @@ public class Serafin implements InterfazCaballeros {
         //AQUI VA EL CODIGO PARA CREAR A LOS CABALLEROS
         System.out.println("CREANDO SERAFIN ESPERE 25 SEGUNDOS");
         System.out.println("\t\tCreando Serafin!! ");
-        Serafin paladin = new Serafin();
+        Serafin serafin = new Serafin();
         for (int i = 1; i < 25; i++) {
             while (i <= 10) {
                 System.out.print("Creando...");
@@ -67,7 +67,7 @@ public class Serafin implements InterfazCaballeros {
         setVidaSerafin(10000);
         setPuntosAtaque(1036);
         System.out.println("\nSERAFIN CREADO CON EXITO!!\n\n");
-        return paladin;
+        return serafin;
     }
     
     @Override
@@ -159,11 +159,13 @@ public class Serafin implements InterfazCaballeros {
     @Override
     public void AtacarSerafin() {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-//        if (serafin instanceof Serafin) {
-//            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
-//            System.out.println("Serafin Atacando!!!");
-//            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
-//        }
+        if(ComprobarObjetos()){
+            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
+            System.out.println("Unidad de caballeros Atacando!!!");
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        }else{
+            System.out.println("No se han creado Serafines");
+        }
     }
 
     @Override

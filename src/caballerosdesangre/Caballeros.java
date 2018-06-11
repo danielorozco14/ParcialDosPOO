@@ -118,6 +118,8 @@ public class Caballeros implements InterfazCaballeros {
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
             System.out.println("Unidad de caballeros Atacando!!!");
             //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        }else{
+            System.out.println("No se han creado Caballeros");
         }
         
     }

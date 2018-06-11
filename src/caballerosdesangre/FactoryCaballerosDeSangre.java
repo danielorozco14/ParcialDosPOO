@@ -25,7 +25,9 @@ public class FactoryCaballerosDeSangre implements AbstractFactory {
         switch(type){
             case 1:
                 return new Caballeros();
-            case 2:
+            case 2: 
+                return new Serafin();
+            case 3:
                 return new Recursos();
             default:
                 System.out.println("Opcion equivocada");
