@@ -26,7 +26,17 @@ public class MenuJuego {
     private static String nomJugador2;
     private static int opcionRaza1;
     private static int opcionRaza2;
-  
+    private static int typeRaza;
+
+    public int getTypeRaza() {
+        return typeRaza;
+    }
+
+    public void setTypeRaza(int typeRaza) {
+        this.typeRaza = typeRaza;
+    }
+    
+    
     public ArrayList<String>NombresJugador;
 
     public  int getOpcionRaza1() {
@@ -86,15 +96,15 @@ public class MenuJuego {
         System.out.println("1. Caballeros de Sangre");
         System.out.println("2. Necromantes");
         System.out.println("3. Orcos");
-        setOpcionRaza1(op.nextInt());
+        setOpcionRaza1(op.nextInt());//GUARDA LA OPCION DE LA RAZA ELEGIDA ;
         
         System.out.println("\t\t"+nombres2+" Elija su raza por favor: ");
         System.out.println("1. Caballeros de Sangre");
         System.out.println("2. Necromantes");
         System.out.println("3. Orcos");
-        setOpcionRaza2(op.nextInt());
+        setOpcionRaza2(op.nextInt());//GUARDA LA OPCION DE LA RAZA ELEGIDA 2;
              
-         Juego iniciarJuego=new Juego();
+        Juego iniciarJuego=new Juego();
         iniciarJuego.adminTurnos();
     }
     
