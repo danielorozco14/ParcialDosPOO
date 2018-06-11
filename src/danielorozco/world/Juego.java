@@ -5,6 +5,7 @@
  */
 package danielorozco.world;
 
+import caballerosdesangre.CentroMandoCaballeros;
 import java.util.Scanner;
 import caballerosdesangre.InterfazCaballeros;
 import orcos.InterfazOrcos;
@@ -119,18 +120,15 @@ public class Juego {
         Scanner opciones1 = new Scanner(System.in);
         MenuJuego menu = new MenuJuego();
         String nom1 = (menu.getNomJugador1());
-        System.out.println(numero);
         System.out.println("\n---------------------------------------");
         System.out.println("\t\t" + nom1);
         System.out.println("---------------------------------------");
         System.out.println("| 1. Creacion de Milicia              |");
         System.out.println("| 2. Creacion de Recursos             |");
         System.out.println("| 3. Creacion de Vehiculos            |");
-        System.out.println("| 4. Recoleccion de Milicia           |");
-        System.out.println("| 5. Recoleccion de Recursos          |");
-        System.out.println("| 6. Recoleccion de Vehiculos         |");
-//        System.out.println("|\t\t\t\t      |");
-//        System.out.println("|\t\t\t\t      |");
+        System.out.println("| 4. Recolectar Recursos              |");
+        //        System.out.println("|\t\t\t\t      |");
+        //        System.out.println("|\t\t\t\t      |");
         System.out.println("---------------------------------------");
         setType(opciones1.nextInt());
         switch (getType()) {
@@ -150,6 +148,7 @@ public class Juego {
                         InterfazCaballeros serafin = factory.getCaballero(2);
                         serafin.CrearSerafin();
                         break;
+
                     default:
                         System.out.println("No ha seleccionado nada valido");
                 }
@@ -165,6 +164,13 @@ public class Juego {
                 caballero = factory.getCaballero(3);//ESTA OPCION SERIA LA QUE DEFINE SI SE CREAN MILICIAS O RECURSOS;
                 caballero.CrearRecursos(opciones1.nextInt());
                 break;
+            case 3:
+                System.out.println("Aun no esta implementada la creacion de vehiculos");
+                break;
+            case 4:
+                CentroMandoCaballeros hq = CentroMandoCaballeros.getInstance();
+                hq.CentroMandoCaballero();
+                break;
             default:
                 System.out.println("No ha seleccionado nada valido");
 
@@ -176,14 +182,13 @@ public class Juego {
         Scanner opciones2 = new Scanner(System.in);
         MenuJuego menu = new MenuJuego();
         String nom2 = (menu.getNomJugador2());
-        System.out.println(numero);
         System.out.println("\n---------------------------------------");
         System.out.println("\t\t" + nom2);
         System.out.println("---------------------------------------");
         System.out.println("| 1. Creacion de Milicia              |");
         System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Recoleccion de Recursos          |");
-        System.out.println("| 4. Recoleccion de Milicia           |");
+        System.out.println("| 3. Creacion de Vehiculos            |");
+        System.out.println("| 4. Recolectar Recursos              |");
 //        System.out.println("|\t\t\t\t      |");
 //        System.out.println("|\t\t\t\t      |");
         System.out.println("---------------------------------------");
@@ -218,6 +223,14 @@ public class Juego {
                 System.out.println("3.Oro");
                 caballero.CrearRecursos(opciones2.nextInt());
                 break;
+            case 3:
+                System.out.println("Aun no esta implementada la creacion de vehiculos");
+                break;
+            case 4:
+                CentroMandoCaballeros hq = CentroMandoCaballeros.getInstance();
+                hq.CentroMandoCaballero();
+                break;
+
             default:
                 System.out.println("No ha seleccionado nada valido");
 
