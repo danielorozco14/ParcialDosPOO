@@ -148,7 +148,6 @@ public class Juego {
                         InterfazCaballeros serafin = factory.getCaballero(2);
                         serafin.CrearSerafin();
                         break;
-
                     default:
                         System.out.println("No ha seleccionado nada valido");
                 }
@@ -173,7 +172,6 @@ public class Juego {
                 break;
             default:
                 System.out.println("No ha seleccionado nada valido");
-
         }
     }
 
@@ -210,7 +208,6 @@ public class Juego {
                         InterfazCaballeros serafin = factory.getCaballero(2);
                         serafin.CrearSerafin();
                         break;
-
                 }
                 break;
 
