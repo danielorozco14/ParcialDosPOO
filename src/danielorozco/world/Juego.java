@@ -72,14 +72,17 @@ public class Juego {
             case 1:
                 factory = FactoryProducer.getFactory(1);
                 InterfazCaballeros caballero = factory.getCaballero(1);
+                opcionesJugadorUno();
                 break;
             case 2:
                 factory = FactoryProducer.getFactory(2);
                 InterfazNecromantes necromante = factory.getNecromantes(2);
+                opcionesJugadorUno();
                 break;
             case 3:
                 factory = FactoryProducer.getFactory(3);
                 InterfazOrcos orcos = factory.getOrcos(3);
+                opcionesJugadorUno();
                 break;
             default:
                 System.out.println("Seleccione una opcion valida");
@@ -89,19 +92,22 @@ public class Juego {
 
     public void OperacionesJugadorDos() {
         MenuJuego menu = new MenuJuego();
-        
+
         switch (menu.getOpcionRaza2()) {
             case 1:
                 factory = FactoryProducer.getFactory(1);
                 InterfazCaballeros caballero = factory.getCaballero(1);
+                opcionesJugadorDos();
                 break;
             case 2:
                 factory = FactoryProducer.getFactory(2);
                 InterfazNecromantes necromante = factory.getNecromantes(2);
+                opcionesJugadorDos();
                 break;
             case 3:
                 factory = FactoryProducer.getFactory(3);
                 InterfazOrcos orcos = factory.getOrcos(3);
+                opcionesJugadorDos();
                 break;
             default:
                 System.out.println("Seleccione una opcion valida");
@@ -119,21 +125,52 @@ public class Juego {
         System.out.println("---------------------------------------");
         System.out.println("| 1. Creacion de Milicia              |");
         System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Recoleccion de Recursos          |");
+        System.out.println("| 3. Creacion de Vehiculos            |");
         System.out.println("| 4. Recoleccion de Milicia           |");
+        System.out.println("| 5. Recoleccion de Recursos          |");
+        System.out.println("| 6. Recoleccion de Vehiculos         |");
 //        System.out.println("|\t\t\t\t      |");
 //        System.out.println("|\t\t\t\t      |");
         System.out.println("---------------------------------------");
         setType(opciones1.nextInt());
-        switch(getType()){
+        switch (getType()) {
             case 1:
-                factory = FactoryProducer.getFactory(1);
+                System.out.println("Que milicia desea crear?");
+                System.out.println("1. Caballeros");
+                System.out.println("2. Paladin");
+                int type = opciones1.nextInt();
+                switch (type) {
+                    case 1:
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                        InterfazCaballeros caballero = factory.getCaballero(1);
+                        caballero.Crear();
+                        break;
+                    case 2:
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                        InterfazCaballeros serafin = factory.getCaballero(2);
+                        serafin.CrearSerafin();
+                        break;
+                    default:
+                        System.out.println("No ha seleccionado nada valido");
+                }
+                break;
+
+            case 2:
+                factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                 InterfazCaballeros caballero = factory.getCaballero(1);
-                caballero.Atacar(400);
-            
+                System.out.println("Que recursos desea crear?");
+                System.out.println("1.Madera");
+                System.out.println("2.Orbes");
+                System.out.println("3.Oro");
+                caballero = factory.getCaballero(3);//ESTA OPCION SERIA LA QUE DEFINE SI SE CREAN MILICIAS O RECURSOS;
+                caballero.CrearRecursos(opciones1.nextInt());
+                break;
+            default:
+                System.out.println("No ha seleccionado nada valido");
+
         }
     }
-    
+
     public void opcionesJugadorDos() {
 
         Scanner opciones2 = new Scanner(System.in);
@@ -151,5 +188,39 @@ public class Juego {
 //        System.out.println("|\t\t\t\t      |");
         System.out.println("---------------------------------------");
         setType(opciones2.nextInt());
+        switch (getType()) {
+            case 1:
+                System.out.println("Que milicia desea crear?");
+                System.out.println("1. Caballeros");
+                System.out.println("2. Paladin");
+                int type = opciones2.nextInt();
+                switch (type) {
+                    case 1:
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                        InterfazCaballeros caballero = factory.getCaballero(1);
+                        caballero.Crear();
+                        break;
+                    case 2:
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                        InterfazCaballeros serafin = factory.getCaballero(2);
+                        serafin.CrearSerafin();
+                        break;
+
+                }
+                break;
+
+            case 2:
+                factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                InterfazCaballeros caballero = factory.getCaballero(3);
+                System.out.println("Que recursos desea crear?");
+                System.out.println("1.Madera");
+                System.out.println("2.Orbes");
+                System.out.println("3.Oro");
+                caballero.CrearRecursos(opciones2.nextInt());
+                break;
+            default:
+                System.out.println("No ha seleccionado nada valido");
+
+        }
     }
 }
