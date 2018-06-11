@@ -128,21 +128,8 @@ public class Serafin implements InterfazCaballeros {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void Defender(int vidaAliada) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    @Override
-    public void AtacarSerafin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void DefenderSerafin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+   
     @Override
     public void RecolectarCaballero(Caballeros caballero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -172,15 +159,15 @@ public class Serafin implements InterfazCaballeros {
     @Override
     public void AtacarSerafin() {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if (serafin instanceof Serafin) {
-            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
-            System.out.println("Serafin Atacando!!!");
-            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
-        }
+//        if (serafin instanceof Serafin) {
+//            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
+//            System.out.println("Serafin Atacando!!!");
+//            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+//        }
     }
 
     @Override
-    public void DefenderSerafin(Serafin serafin) {
+    public void DefenderSerafin() {
          System.out.println("Unidad de Serafin Defendiendo!!!");
         //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
     }
@@ -206,6 +193,11 @@ public class Serafin implements InterfazCaballeros {
             cont++;
         }
         return false;
+    }
+
+    @Override
+    public void Defender(int vidaAliada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
