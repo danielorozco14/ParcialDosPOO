@@ -11,15 +11,16 @@ package caballerosdesangre;
  */
 public interface InterfazCaballeros {
 
+    boolean ComprobarObjetos();
     Caballeros Crear();
-    void Entrenar(Caballeros caballero);
-    void Atacar(Caballeros caballero,int vidaEnemiga);
-    void Defender(Caballeros caballero,int vidaAliada);
+    void Entrenar();
+    void Atacar(int vidaEnemiga);
+    void Defender(int vidaAliada);
     
     Serafin CrearSerafin();
-    void EntrenarSerafin(Serafin paladin);
-    void AtacarSerafin(Serafin paladin);
-    void DefenderSerafin(Serafin paladin);
+    void EntrenarSerafin();
+    void AtacarSerafin();
+    void DefenderSerafin();
     
     void RecolectarCaballero(Caballeros caballero);
     void RecolectarSerafin(Serafin serafin);

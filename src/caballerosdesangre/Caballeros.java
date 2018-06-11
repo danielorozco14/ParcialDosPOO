@@ -6,6 +6,7 @@
 package caballerosdesangre;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -15,10 +16,10 @@ import java.util.ArrayList;
  * Implementa los aspectos basicos del tipo de milicia "Caballeros"
  *
  */
-public class Caballeros  implements InterfazCaballeros  {
+public class Caballeros implements InterfazCaballeros {
 
     private static int vidaCaballero, puntosAtaque;
-    
+
     private static ArrayList<Caballeros> AlmacenCaballeros;
 
     public int getPuntosAtaque() {
@@ -87,10 +88,10 @@ public class Caballeros  implements InterfazCaballeros  {
     }
 
     @Override
-    public void Entrenar(Caballeros caballero) {
+    public void Entrenar() {
         //AQUI VA EL CODIGO PARA ENTRENAR A LOS CABALLEROS ALMACENADOS EN LA 
         //EDIFICACION CORRESPONDIENTE
-        if (caballero instanceof Caballeros) {
+        if(ComprobarObjetos()){
             System.out.println("Se ha seleccionado una unidad de caballeros,"
                     + "se procedera a entrenarlos y ponerlos en el arrayList");
             System.out.println("UNIDAD DE CABALLEROS EN ENTRENAMIENTO");
@@ -111,22 +112,27 @@ public class Caballeros  implements InterfazCaballeros  {
     }
 
     @Override
-    public void Atacar(Caballeros caballero, int vidaEnemiga) {
+    public void Atacar(int vidaEnemiga) {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if (caballero instanceof Caballeros) {
+        if(ComprobarObjetos()){
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
             System.out.println("Unidad de caballeros Atacando!!!");
-            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
         }
+        
     }
 
     @Override
-    public void Defender(Caballeros caballero, int vidaAliada) {
+    public void Defender(int vidaAliada) {
         System.out.println("Unidad de caballeros Defendiendo!!!");
-        //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+        if(ComprobarObjetos()){
+            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
+            System.out.println("Unidad de caballeros Defendiendo!!!");
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        }
+      
 
     }
-
 
     @Override
     public void CrearRecursos(int a) {
@@ -150,19 +156,45 @@ public class Caballeros  implements InterfazCaballeros  {
     }
 
     @Override
-    public void EntrenarSerafin(Serafin paladin) {
+    public boolean ComprobarObjetos() {
+
+        int cont = 0, cont1 = 0;
+
+        for (Caballeros caballero : AlmacenCaballeros) {
+
+            if (AlmacenCaballeros.contains(caballero) && cont == 0) {
+                return true;
+            } else if (AlmacenCaballeros.contains(caballero) && cont != 0) {
+                return true;
+            } else if (AlmacenCaballeros.contains(caballero) == false) {
+                cont1++;
+                if (AlmacenCaballeros.size() == cont1) {
+                    System.out.println("No existen Caballeros entrenados");
+                }
+            }
+            cont++;
+        }
+        return false;
     }
 
     @Override
-    public void AtacarSerafin(Serafin paladin) {
+    public void EntrenarSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void DefenderSerafin(Serafin paladin) {
+    public void AtacarSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DefenderSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void RecolectarSerafin(Serafin serafin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -40,17 +40,7 @@ public class Serafin implements InterfazCaballeros {
         return null;
     }
 
-    @Override
-    public void Entrenar(Caballeros caballero) {
-    }
-
-    @Override
-    public void Atacar(Caballeros caballero, int vidaEnemiga) {
-    }
-
-    @Override
-    public void Defender(Caballeros caballero, int vidaAliada) {
-    }
+    
 
     @Override
     public Serafin CrearSerafin() {
@@ -99,8 +89,8 @@ public class Serafin implements InterfazCaballeros {
 
 
     @Override
-    public void EntrenarSerafin(Serafin serafin) {
-        if (serafin instanceof Serafin) {
+    public void EntrenarSerafin() {
+        
             System.out.println("Se ha seleccionado un Serafin,"
                     + "se procedera a entrenarlo y ponerlo en el arrayList");
             System.out.println("SERAFIN EN ENTRENAMIENTO");
@@ -122,13 +112,65 @@ public class Serafin implements InterfazCaballeros {
 
             System.out.println("\nUNIDAD DE SERAFIN ENTRENADA CON EXITO!!");
             //ArrayListDeCaballerosEntrenados.add(caballlero);
-        } else {
+       
             System.out.println("Aun no se ha creado un Serafin para poder ENTRENAR");
         }
+
+    
+
+    @Override
+    public void Entrenar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void AtacarSerafin(Serafin serafin) {
+    public void Atacar(int vidaEnemiga) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Defender(int vidaAliada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AtacarSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DefenderSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarCaballero(Caballeros caballero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void CrearRecursos(int a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarMadera(int cantidadMadera) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarOrbes(int cantidadOrbes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RecolectarOro(int cantidadOro) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    }
+
+    @Override
+    public void AtacarSerafin() {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
         if (serafin instanceof Serafin) {
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
@@ -143,24 +185,27 @@ public class Serafin implements InterfazCaballeros {
         //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
     }
 
-    @Override
-    public void RecolectarCaballero(Caballeros caballero) {
-    }
+   
 
     @Override
-    public void CrearRecursos(int a) {
-    }
+    public boolean ComprobarObjetos() {
+        int cont = 0, cont1 = 0;
 
-    @Override
-    public void RecolectarMadera(int cantidadMadera) {
-    }
+        for (Serafin serafin : AlmacenSerafin) {
 
-    @Override
-    public void RecolectarOrbes(int cantidadOrbes) {
-    }
-
-    @Override
-    public void RecolectarOro(int cantidadOro) {
+            if (AlmacenSerafin.contains(serafin) && cont == 0) {
+                return true;
+            } else if (AlmacenSerafin.contains(serafin) && cont != 0) {
+                return true;
+            } else if (AlmacenSerafin.contains(serafin) == false) {
+                cont1++;
+                if (AlmacenSerafin.size() == cont1) {
+                    return false;
+                }
+            }
+            cont++;
+        }
+        return false;
     }
 
 }

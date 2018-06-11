@@ -55,20 +55,6 @@ public class Recursos implements InterfazCaballeros {
     public Caballeros Crear() {
         return null;
     }
-
-    @Override
-    public void Entrenar(Caballeros caballero) {
-    }
-
-    @Override
-    public void Atacar(Caballeros caballero, int vidaEnemiga) {
-    }
-
-    @Override
-    public void Defender(Caballeros caballero, int vidaAliada) {
-    }
-
-    
 ////////////////////////////////////////////////////////////////////////////////
 
     @Override
@@ -111,20 +97,7 @@ public class Recursos implements InterfazCaballeros {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void EntrenarSerafin(Serafin paladin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void AtacarSerafin(Serafin paladin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void DefenderSerafin(Serafin paladin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     public void RecolectarCaballero(Caballeros caballero) {
@@ -133,6 +106,56 @@ public class Recursos implements InterfazCaballeros {
 
     @Override
     public void RecolectarSerafin(Serafin serafin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean ComprobarObjetos() {
+//        int cont = 0, cont1 = 0;
+//
+//        for (Integer RecursosMadera1 : RecursosMadera) {
+//            if (RecursosMadera.contains(15) && cont == 0) {
+//                return true;
+//            } else if (RecursosMadera.contains(15) && cont != 0) {
+//                return true;
+//            } else if (RecursosMadera.contains(15) == false) {
+//                cont1++;
+//                if (RecursosMadera.size() == cont1) {
+//                    System.out.println("NO HAY RECURSOS DE MADERA");
+//                }
+//            }
+//            cont++;
+//        }
+        return false;
+    }
+
+    @Override
+    public void Entrenar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Atacar(int vidaEnemiga) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Defender(int vidaAliada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void EntrenarSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AtacarSerafin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DefenderSerafin() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
