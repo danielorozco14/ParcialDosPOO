@@ -57,9 +57,14 @@ public class Juego {
         }
         while (true) {
             if (getTurnoJugador() == 1) {
+                MenuJuego nomPlayer1= new MenuJuego();
+                System.out.println("\nTurno Jugador 1: "+nomPlayer1.getNomJugador1());
                 OperacionesJugadorUno();
                 setTurnoJugador(2);
             } else if (getTurnoJugador() == 2) {
+                 MenuJuego nomPlayer2= new MenuJuego();
+                 System.out.println("********* Turno Jugador 2: "+nomPlayer2.getNomJugador2()+" **************");
+                
                 OperacionesJugadorDos();
                 setTurnoJugador(1);
             }
@@ -71,19 +76,17 @@ public class Juego {
         MenuJuego menu = new MenuJuego();
         switch (menu.getOpcionRaza1()) {
             case 1:
-                factory = FactoryProducer.getFactory(1);
-                InterfazCaballeros caballero = factory.getCaballero(1);
-                opcionesJugadorUno();
+                CentroMandoCaballeros caballeros= CentroMandoCaballeros.getInstance();
+                caballeros.CentroMandoCaballero();
+//                factory = FactoryProducer.getFactory(1);
+//                InterfazCaballeros caballero = factory.getCaballero(1);
+//                opcionesJugadorUno();
                 break;
             case 2:
-                factory = FactoryProducer.getFactory(2);
-                InterfazNecromantes necromante = factory.getNecromantes(2);
-                opcionesJugadorUno();
+                // CENTRO DE MANDO NECROMANTES
                 break;
             case 3:
-                factory = FactoryProducer.getFactory(3);
-                InterfazOrcos orcos = factory.getOrcos(3);
-                opcionesJugadorUno();
+             // CENTRO DE MANDO ORCOS 
                 break;
             default:
                 System.out.println("Seleccione una opcion valida");
@@ -96,141 +99,23 @@ public class Juego {
 
         switch (menu.getOpcionRaza2()) {
             case 1:
-                factory = FactoryProducer.getFactory(1);
-                InterfazCaballeros caballero = factory.getCaballero(1);
-                opcionesJugadorDos();
+                CentroMandoCaballeros caballeros= CentroMandoCaballeros.getInstance();
+                caballeros.CentroMandoCaballero();
                 break;
             case 2:
-                factory = FactoryProducer.getFactory(2);
-                InterfazNecromantes necromante = factory.getNecromantes(2);
-                opcionesJugadorDos();
+                // CENTRO DE MANDO NECROMANTES
+                // CentroMandoOrcos orcos= CentroMandoOrcos.getInstance();
+                // orcos.CentroMandoorcos();
                 break;
             case 3:
-                factory = FactoryProducer.getFactory(3);
-                InterfazOrcos orcos = factory.getOrcos(3);
-                opcionesJugadorDos();
+                // CENTRO DE MANDO ORCOS
+//                CentroMandoOrcos orcos= CentroMandoOrcos.getInstance();
+//                orcos.CentroMandoorcos();
                 break;
             default:
                 System.out.println("Seleccione una opcion valida");
         }
     }
 
-    public void opcionesJugadorUno() {
-
-        Scanner opciones1 = new Scanner(System.in);
-        MenuJuego menu = new MenuJuego();
-        String nom1 = (menu.getNomJugador1());
-        System.out.println("\n---------------------------------------");
-        System.out.println("\t\t" + nom1);
-        System.out.println("---------------------------------------");
-        System.out.println("| 1. Creacion de Milicia              |");
-        System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Creacion de Vehiculos            |");
-        System.out.println("| 4. Recolectar Recursos              |");
-        //        System.out.println("|\t\t\t\t      |");
-        //        System.out.println("|\t\t\t\t      |");
-        System.out.println("---------------------------------------");
-        setType(opciones1.nextInt());
-        switch (getType()) {
-            case 1:
-                System.out.println("Que milicia desea crear?");
-                System.out.println("1. Caballeros");
-                System.out.println("2. Paladin");
-                int type = opciones1.nextInt();
-                switch (type) {
-                    case 1:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                        InterfazCaballeros caballero = factory.getCaballero(1);
-                        caballero.Crear();
-                        break;
-                    case 2:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                        InterfazCaballeros serafin = factory.getCaballero(2);
-                        serafin.CrearSerafin();
-                        break;
-                    default:
-                        System.out.println("No ha seleccionado nada valido");
-                }
-                break;
-
-            case 2:
-                factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                InterfazCaballeros caballero = factory.getCaballero(1);
-                System.out.println("Que recursos desea crear?");
-                System.out.println("1.Madera");
-                System.out.println("2.Orbes");
-                System.out.println("3.Oro");
-                caballero = factory.getCaballero(3);//ESTA OPCION SERIA LA QUE DEFINE SI SE CREAN MILICIAS O RECURSOS;
-                caballero.CrearRecursos(opciones1.nextInt());
-                break;
-            case 3:
-                System.out.println("Aun no esta implementada la creacion de vehiculos");
-                break;
-            case 4:
-                CentroMandoCaballeros hq = CentroMandoCaballeros.getInstance();
-                hq.CentroMandoCaballero();
-                break;
-            default:
-                System.out.println("No ha seleccionado nada valido");
-        }
-    }
-
-    public void opcionesJugadorDos() {
-
-        Scanner opciones2 = new Scanner(System.in);
-        MenuJuego menu = new MenuJuego();
-        String nom2 = (menu.getNomJugador2());
-        System.out.println("\n---------------------------------------");
-        System.out.println("\t\t" + nom2);
-        System.out.println("---------------------------------------");
-        System.out.println("| 1. Creacion de Milicia              |");
-        System.out.println("| 2. Creacion de Recursos             |");
-        System.out.println("| 3. Creacion de Vehiculos            |");
-        System.out.println("| 4. Recolectar Recursos              |");
-//        System.out.println("|\t\t\t\t      |");
-//        System.out.println("|\t\t\t\t      |");
-        System.out.println("---------------------------------------");
-        setType(opciones2.nextInt());
-        switch (getType()) {
-            case 1:
-                System.out.println("Que milicia desea crear?");
-                System.out.println("1. Caballeros");
-                System.out.println("2. Paladin");
-                int type = opciones2.nextInt();
-                switch (type) {
-                    case 1:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                        InterfazCaballeros caballero = factory.getCaballero(1);
-                        caballero.Crear();
-                        break;
-                    case 2:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                        InterfazCaballeros serafin = factory.getCaballero(2);
-                        serafin.CrearSerafin();
-                        break;
-                }
-                break;
-
-            case 2:
-                factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
-                InterfazCaballeros caballero = factory.getCaballero(3);
-                System.out.println("Que recursos desea crear?");
-                System.out.println("1.Madera");
-                System.out.println("2.Orbes");
-                System.out.println("3.Oro");
-                caballero.CrearRecursos(opciones2.nextInt());
-                break;
-            case 3:
-                System.out.println("Aun no esta implementada la creacion de vehiculos");
-                break;
-            case 4:
-                CentroMandoCaballeros hq = CentroMandoCaballeros.getInstance();
-                hq.CentroMandoCaballero();
-                break;
-
-            default:
-                System.out.println("No ha seleccionado nada valido");
-
-        }
-    }
+    
 }
