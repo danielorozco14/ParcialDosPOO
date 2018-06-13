@@ -8,13 +8,15 @@ package caballerosdesangre;
 import danielorozco.world.AbstractFactory;
 import danielorozco.world.FactoryProducer;
 import java.util.Scanner;
-import danielorozco.world.Juego;
 import danielorozco.world.MenuJuego;
 
 /**
- * ENCARGADO DE ALMACENAR LOS RECURSOS DE LA RAZA CABALLEROS
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
+ */
+
+/**
+ * ENCARGADO DE ALMACENAR LOS RECURSOS DE LA RAZA CABALLEROS
  */
 public class CentroMandoCaballeros {
 
@@ -47,6 +49,11 @@ public class CentroMandoCaballeros {
         }
         return hq;
     }
+    
+    /**
+     * Maneja todo lo relacionado a la creacion, ataque y defensa de la raza Caballeros
+     * @return void
+     */
 
     public void CentroMandoCaballero() {
         Scanner opcion = new Scanner(System.in);
@@ -60,15 +67,15 @@ public class CentroMandoCaballeros {
         System.out.println("\t\t******** CENTRO DE MANDO CABALLEROS DE SANGRE ***********");
         System.out.println("\t\t---------- HP Centro de Mando =" + getVidaHQ() + " -----------");
         System.out.println("---------------------------------------------------------------------");
-        System.out.println("\t\t| 1. Creacion de Milicia              |");
-        System.out.println("\t\t| 2. Creacion de Recursos             |");
-        System.out.println("\t\t| 3. Creacion de Vehiculos            |");
-        System.out.println("\t\t| 4. Creacion de Edificios            |");
-        System.out.println("\t\t| 5. Recolectar Vehiculos             |");
-        System.out.println("\t\t| 6. Recolectar Recursos              |");
-        System.out.println("\t\t---------------------------------------");
-        System.out.println("\t\t| 7. Atacar Territorio Enemigo        |");
-        System.out.println("\t\t| 8. Defender Ataque Enemigo          |");
+        System.out.println("|\t\t 1. Creacion de Milicia                             |");
+        System.out.println("|\t\t 2. Creacion de Recursos                            |");
+        System.out.println("|\t\t 3. Creacion de Vehiculos                           |");
+        System.out.println("|\t\t 4. Creacion de Edificios                           |");
+        System.out.println("|\t\t 5. Recolectar Vehiculos                            |");
+        System.out.println("|\t\t 6. Recolectar Recursos                             |");
+        System.out.println("|\t\t---------------------------------------");
+        System.out.println("|\t\t 7. Atacar Territorio Enemigo                       |");
+        System.out.println("|\t\t 8. Defender Ataque Enemigo                         |");
         System.out.println("----------------------------------------------------------------------");
         //        System.out.println("|\t\t\t\t      |");
         //        System.out.println("|\t\t\t\t      |");
