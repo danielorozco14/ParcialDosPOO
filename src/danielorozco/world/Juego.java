@@ -8,8 +8,8 @@ package danielorozco.world;
 import caballerosdesangre.CentroMandoCaballeros;
 import java.util.Scanner;
 import caballerosdesangre.InterfazCaballeros;
-import orcos.InterfazOrcos;
 import necromantes.InterfazNecromantes;
+import orcos.InterfazOrcos;
 
 /**
  *
