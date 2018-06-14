@@ -9,6 +9,11 @@ package caballerosdesangre.edificios;
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
-public class EdificioMilicia {
+public class EdificioMilicia implements InterfazEdificiosCaballeros {
+
+    @Override
+    public void CrearEdificio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
