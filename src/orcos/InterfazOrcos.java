@@ -10,9 +10,24 @@ package orcos;
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public interface InterfazOrcos {
-    void Crear();
+    boolean ComprobarObjetos();
+    Orcos Crear();
     void Entrenar();
-    void Atacar();
-    void Defender();
-    void Recolectar();
+    void Atacar( int vidaEnemiga);
+    void Defender(int vidaAliada);
+    
+    DarkSwordsman CrearSwordman();
+    void EntrenarSwordman();
+    void AtacarSwordman(int vidaEnemiga);
+    void DefenderSwordman(int vidaEnemiga);
+    
+    void RecolectarOrco(Orcos orco);
+    void RecolectarSwordman(DarkSwordsman swordman);
+    
+    void CrearRecursos(int a);
+    boolean ComprobarRecursos();
+    void RecolectarDiamantes(int cantidadDiamantes);
+    void RecolectarOrbesOscuros(int cantidadOrbesOscuros);
+    void RecolectarRocas(int cantidadRocas);
+
 }
