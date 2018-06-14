@@ -26,7 +26,7 @@ public interface InterfazCaballeros {
     void RecolectarSerafin(Serafin serafin);
     
     void CrearRecursos(int a);
-    
+    boolean ComprobarRecursos(int a);
     void RecolectarMadera(int cantidadMadera);
     void RecolectarOrbes(int cantidadOrbes);
     void RecolectarOro(int cantidadOro);
