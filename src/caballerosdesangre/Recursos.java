@@ -154,4 +154,9 @@ public class Recursos implements InterfazCaballeros {
     public void DefenderSerafin() {
     }
 
+    @Override
+    public boolean ComprobarRecursos(int a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
