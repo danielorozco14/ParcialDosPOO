@@ -24,6 +24,17 @@ public class FactoryOrcos implements AbstractFactory {
     public InterfazOrcos getOrcos(int type) {
         //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA ORCOS 
         //CREAR MILICIA,RECOLECTAR RECURSOS,ETC(return Orcos(),return DarkSwordman();
+        switch(type){
+            case 1:
+                return new Orcos();//ESCUADRON
+            case 2: 
+                return new DarkSwordsman();//ESPECIALISTA
+            case 3:
+                return new Recursos();
+            default:
+                System.out.println("Opcion equivocada");
+        }
+        
         return null;
     }
 
