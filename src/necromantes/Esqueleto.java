@@ -11,10 +11,10 @@ import java.util.ArrayList;
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
-public class Esqueleto implements InterfazNecromantes
-{
+public class Esqueleto implements InterfazNecromantes {
+
     private static int vidaEsqueleto, puntosAtaque;
-    
+
     private static ArrayList<Esqueleto> AlmacenEsqueletos;
 
     public static int getVidaEsqueleto() {
@@ -33,9 +33,10 @@ public class Esqueleto implements InterfazNecromantes
         Esqueleto.puntosAtaque = puntosAtaque;
     }
 
-    public Esqueleto(){
-        AlmacenEsqueletos= new ArrayList<>();
+    public Esqueleto() {
+        AlmacenEsqueletos = new ArrayList<>();
     }
+
     @Override
     public Esqueleto Crear() {
         //AQUI VA EL CODIGO PARA CREAR A LOS ESQUELETOS
@@ -65,11 +66,11 @@ public class Esqueleto implements InterfazNecromantes
     }
 
     @Override
-    public void Entrenar(Esqueleto esqueleto) {
+    public void Entrenar() {
         //AQUI VA EL CODIGO PARA ENTRENAR A LOS CABALLEROS ALMACENADOS EN LA 
         //EDIFICACION CORRESPONDIENTE
-        if (esqueleto instanceof Esqueleto) {
-            System.out.println("Se ha seleccionado una unidad de Esqueletos,"
+        if (ComprobarObjetos()) {
+            System.out.println("Se ha seleccionado una unidad de esqueletos,"
                     + "se procedera a entrenarlos y ponerlos en el arrayList");
             System.out.println("UNIDAD DE ESQUELETOS EN ENTRENAMIENTO");
             System.out.println("Entrenando Esqueletos...Espere 10 segundos ");
@@ -89,19 +90,27 @@ public class Esqueleto implements InterfazNecromantes
     }
 
     @Override
-    public void Atacar(Esqueleto esqueleto, int vidaEnemiga) {
+    public void Atacar(int vidaEnemiga) {
+
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if (esqueleto instanceof Esqueleto) {
+        if (ComprobarObjetos()) {
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
             System.out.println("Unidad de esqueletos Atacando!!!");
-            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        } else {
+            System.out.println("No se han creado Esqueletos");
         }
+
     }
 
     @Override
-    public void Defender(Esqueleto esqueleto, int vidaAliada) {
-        System.out.println("Unidad de esqueletos Defendiendo!!!");
-        //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+    public void Defender(int vidaAliada) {
+        if (ComprobarObjetos()) {
+            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
+            System.out.println("Unidad de Esqueletos Defendiendo!!!");
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        }
+
     }
 
     @Override
@@ -122,20 +131,46 @@ public class Esqueleto implements InterfazNecromantes
     }
     
     @Override
+    public boolean ComprobarObjetos() {
+           int cont = 0, cont1 = 0;
+
+        for (Esqueleto esqueleto : AlmacenEsqueletos) {
+
+            if (AlmacenEsqueletos.contains(esqueleto) && cont == 0) {
+                return true;
+            } else if (AlmacenEsqueletos.contains(esqueleto) && cont != 0) {
+                return true;
+            } else if (AlmacenEsqueletos.contains(esqueleto) == false) {
+                cont1++;
+                if (AlmacenEsqueletos.size() == cont1) {
+                    System.out.println("No existen Caballeros entrenados");
+                }
+            }
+            cont++;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean ComprobarRecursos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public SegadoresAlmas CrearSegador() {
         return null;
     }
 
     @Override
-    public void EntrenarSegador(SegadoresAlmas segador) {
+    public void EntrenarSegador() {
     }
 
     @Override
-    public void AtacarSegador(SegadoresAlmas segador) {
+    public void AtacarSegador(int vidaEnemiga) {
     }
 
     @Override
-    public void DefenderSegador(SegadoresAlmas segador) {
+    public void DefenderSegador(int vidaEnemiga) {
     }
 
     @Override
@@ -159,4 +194,5 @@ public class Esqueleto implements InterfazNecromantes
     }
 
     
+
 }

@@ -29,6 +29,17 @@ public class FactoryNecromantes implements AbstractFactory{
     public InterfazNecromantes getNecromantes(int type) {
         //AQUI SE PONDRA TODAS LAS ACCIONES QUE VA A REALIZAR LA RAZA CABALLEROS 
         //CREAR MILICIA,RECOLECTAR RECURSOS,ETC(return Caballeros(),return Serafin();
+        
+        switch(type){
+            case 1:
+                return new Esqueleto();
+            case 2: 
+                return new SegadoresAlmas();
+            case 3:
+                return new Recursos();
+            default:
+                System.out.println("Opcion equivocada");
+        }
         return null;
     }
 

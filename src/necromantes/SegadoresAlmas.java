@@ -33,16 +33,56 @@ public class SegadoresAlmas implements InterfazNecromantes {
         SegadoresAlmas.puntosAtaque = puntosAtaque;
     }
     
-    
+    public SegadoresAlmas(){
+        AlmacenSegadores = new ArrayList<>();
+    }
+
+    @Override
+    public boolean ComprobarObjetos() {
+        int cont = 0, cont1 = 0;
+
+        for (SegadoresAlmas segador : AlmacenSegadores) {
+
+            if (AlmacenSegadores.contains(segador) && cont == 0) {
+                return true;
+            } else if (AlmacenSegadores.contains(segador) && cont != 0) {
+                return true;
+            } else if (AlmacenSegadores.contains(segador) == false) {
+                cont1++;
+                if (AlmacenSegadores.size() == cont1) {
+                    return false;
+                }
+            }
+            cont++;
+        }
+        return false;
+    }
+
+    @Override
+    public Esqueleto Crear() {
+        return null;
+    }
+
+    @Override
+    public void Entrenar() {
+    }
+
+    @Override
+    public void Atacar(int vidaEnemiga) {
+    }
+
+    @Override
+    public void Defender(int vidaAliada) {
+    }
 
     @Override
     public SegadoresAlmas CrearSegador() {
-        //AQUI VA EL CODIGO PARA CREAR A LOS ESQUELETOS
-        System.out.println("CREANDO Segador de Alma ESPERE 15 SEGUNDOS");
-        System.out.println("\t\tCreando Caballeros!! ");
+       
+        System.out.println("CREANDO SEGADOR ESPERE 25 SEGUNDOS");
+        System.out.println("\t\tCreando Serafin!! ");
         SegadoresAlmas segador = new SegadoresAlmas();
-        for (int i = 1; i < 15; i++) {
-            while (i <= 5) {
+        for (int i = 1; i < 25; i++) {
+            while (i <= 10) {
                 System.out.print("Creando...");
                 try {
                     Thread.sleep(500);
@@ -52,112 +92,100 @@ public class SegadoresAlmas implements InterfazNecromantes {
             }
 
             try {
-                Thread.sleep(1500);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
         }
 
-        setVidaSegador(1900);
-        setPuntosAtaque(900);
-        System.out.println("\nUNIDAD DE ESQUELETOS CREADA CON EXITO!!\n\n");
+        setVidaSegador(10000);
+        setPuntosAtaque(1036);
+        System.out.println("\nSEGADOR CREADO CON EXITO!!\n\n");
         return segador;
     }
 
     @Override
-    public void EntrenarSegador(SegadoresAlmas segador) {
-        //AQUI VA EL CODIGO PARA ENTRENAR A LOS CABALLEROS ALMACENADOS EN LA 
-        //EDIFICACION CORRESPONDIENTE
-        if (segador instanceof SegadoresAlmas) {
-            System.out.println("Se ha seleccionado una unidad de Segador de Almas,"
+    public void EntrenarSegador() {
+        System.out.println("Se ha seleccionado un Serafin,"
                     + "se procedera a entrenarlo y ponerlo en el arrayList");
-            System.out.println("UNIDAD DE SEGADOR EN ENTRENAMIENTO");
-            System.out.println("Entrenando Segador...Espere 10 segundos ");
-            for (int i = 1; i < 10; i++) {
-                System.out.print("Entrenando...");
+            System.out.println("SEGADOR EN ENTRENAMIENTO");
+            System.out.println("Entrenando Segador de Almas...Espere 20 segundos ");
+            for (int i = 1; i < 20; i++) {
+                while (i <= 10) {
+                    System.out.print("Entrenando...");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                    }
+                    i++;
+                }
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                 }
             }
 
-            System.out.println("\nUnidad de Segador Entrenada");
+            System.out.println("\nUNIDAD DE SEGADOR ENTRENADA CON EXITO!!");
             //ArrayListDeCaballerosEntrenados.add(caballlero);
-        } else {
-            System.out.println("Aun no se han creado Segadores para poder ENTRENAR");
-        }
-    }
-    @Override
-    public void RecolectarSegador(SegadoresAlmas segador) {
-        if (segador instanceof SegadoresAlmas) {
-            System.out.println("RECOLECTANDO MILICIA!!");
-            for (int i = 1; i <= 5; i++) {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-
-                }
-            }
-            AlmacenSegadores.add(segador);
-        } else {
-            System.out.println("Aun no se han creado Segadores para poder recolectar");
-        }
+       
+            System.out.println("Aun no se ha creado un Segador para poder ENTRENAR");
     }
 
     @Override
-    public void AtacarSegador(SegadoresAlmas segador) {
+    public void AtacarSegador(int vidaEnemiga) {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if (segador instanceof SegadoresAlmas) {
+        if(ComprobarObjetos()){
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
-            System.out.println("Unidad de esqueletos Atacando!!!");
-            //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
+            System.out.println("Segador de Almas Atacando!!!");
+            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
+        }else{
+            System.out.println("No se han creado Segadores");
         }
     }
-    
-    
 
     @Override
-    public void DefenderSegador(SegadoresAlmas segador) {
-        System.out.println("Unidad de esqueletos Defendiendo!!!");
+    public void DefenderSegador(int vidaEnemiga) {
+        System.out.println("Unidad de Segador Defendiendo!!!");
         //setVidaEnemigo= vidaEnemiga - getPuntosAtaque();
     }
 
     @Override
     public void RecolectarEsqueleto(Esqueleto esqueleto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
+    @Override
+    public void RecolectarSegador(SegadoresAlmas segador) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public void CrearRecursos(int a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean ComprobarRecursos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void RecolectarCristales(int cantidadCristal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void RecolectarHuesos(int cantidadHuesos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void RecolectarAlmas(int cantidadAlmas) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
-    @Override
-    public Esqueleto Crear() {
-        return null;
-    }
+    
+    
 
-    @Override
-    public void Entrenar(Esqueleto esqueleto) {
-    }
-
-    @Override
-    public void Atacar(Esqueleto esqueleto, int vidaEnemiga) {
-    }
-
-    @Override
-    public void Defender(Esqueleto esqueleto, int vidaAliada) {
-    }
     
 }

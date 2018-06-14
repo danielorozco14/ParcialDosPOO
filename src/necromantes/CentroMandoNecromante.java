@@ -9,11 +9,13 @@ import java.util.Scanner;
 import danielorozco.world.AbstractFactory;
 import danielorozco.world.FactoryProducer;
 import danielorozco.world.MenuJuego;
+
 /**
  *
  * @author Daniel Alejandro Orozco Orellana <00200617@uca.edu.sv>
  */
 public class CentroMandoNecromante {
+
     private static int vidaHQ;
     private static CentroMandoNecromante hq;
     int type;
@@ -25,7 +27,7 @@ public class CentroMandoNecromante {
     public void setType(int type) {
         this.type = type;
     }
-    
+
     public int getVidaHQ() {
         return vidaHQ;
     }
@@ -99,13 +101,13 @@ public class CentroMandoNecromante {
 
             case 2:
                 factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                InterfazCaballeros caballero;
+                InterfazNecromantes necromantes;
                 System.out.println("Que recursos desea crear?");
-                System.out.println("1.Madera");
-                System.out.println("2.Orbes");
-                System.out.println("3.Oro");
-                caballero = factory.getCaballero(3);//ESTA OPCION SERIA LA QUE DEFINE SI SE CREAN MILICIAS O RECURSOS;
-                caballero.CrearRecursos(opciones1.nextInt());
+                System.out.println("1.Huesos");
+                System.out.println("2.Cristal");
+                System.out.println("3.Almas");
+                necromantes = factory.getNecromantes(3);//ESTA OPCION SERIA LA QUE DEFINE SI SE CREAN MILICIAS O RECURSOS;
+                necromantes.CrearRecursos(opciones1.nextInt());
                 break;
             case 3:
                 System.out.println("Aun no esta implementada la creacion de vehiculos");
@@ -118,24 +120,24 @@ public class CentroMandoNecromante {
                 break;
             case 6:
                 System.out.println("Que recurso desea recolectar?");
-                System.out.println("1. Madera");
-                System.out.println("2. Orbes");
-                System.out.println("3. Oro");
+                System.out.println("1.Huesos");
+                System.out.println("2.Cristal");
+                System.out.println("3.Almas");
                 switch (opciones1.nextInt()) {
                     case 1:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.RecolectarMadera(15);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.RecolectarHuesos(15);
                         break;
                     case 2:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.RecolectarOrbes(15);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.RecolectarCristales(15);
                         break;
                     case 3:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.RecolectarOro(15);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.RecolectarAlmas(15);
                         break;
                     default:
                         System.out.println("No eligio nada valido");
@@ -150,28 +152,28 @@ public class CentroMandoNecromante {
                 switch (opciones1.nextInt()) {
                     case 1:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.Atacar(300);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.Atacar(300);
                         break;
                     case 2:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.Atacar(300);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.Atacar(300);
                         break;
                     case 3:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.Atacar(300);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.Atacar(300);
                         break;
                     case 4:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.Atacar(5000);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.Atacar(5000);
                         break;
                     case 5:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        caballero = factory.getCaballero(3);
-                        caballero.Atacar(5000);
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.Atacar(5000);
                         break;
                     default:
                         System.out.println("No opcion valida");
@@ -179,9 +181,7 @@ public class CentroMandoNecromante {
             default:
                 System.out.println("No ha seleccionado nada valido");
         }
-        
-        
-        
+
     }
 
 }

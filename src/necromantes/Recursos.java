@@ -18,9 +18,9 @@ public class Recursos implements InterfazNecromantes {
     private static ArrayList<Integer> RecursosHuesos;
     private static ArrayList<Integer> RecursosAlmas;
 
-    private static int cantidadCristal=0;
-    private static int cantidadHuesos=0;
-    private static int cantidadAlmas=0;
+    private static int cantidadCristal=5000;
+    private static int cantidadHuesos=10000;
+    private static int cantidadAlmas=3000;//RECURSO MAS TARDADO DE OBTENER
 
     public static int getCantidadCristal() {
         return cantidadCristal;
@@ -58,33 +58,11 @@ public class Recursos implements InterfazNecromantes {
         return null;
     }
 
-    @Override
-    public void Entrenar(Esqueleto esqueleto) {
-    }
 
-    @Override
-    public void Atacar(Esqueleto esqueleto, int vidaEnemiga) {
-    }
-
-    @Override
-    public void Defender(Esqueleto esqueleto, int vidaAliada) {
-    }
 
     @Override
     public SegadoresAlmas CrearSegador() {
         return null;
-    }
-
-    @Override
-    public void EntrenarSegador(SegadoresAlmas segador) {
-    }
-
-    @Override
-    public void AtacarSegador(SegadoresAlmas segador) {
-    }
-
-    @Override
-    public void DefenderSegador(SegadoresAlmas segador) {
     }
 
     @Override
@@ -126,6 +104,47 @@ public class Recursos implements InterfazNecromantes {
     @Override
     public void RecolectarAlmas(int cantidadAlmas) {
         RecursosAlmas.add(cantidadAlmas);
+    }
+
+    @Override
+    public boolean ComprobarObjetos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    @Override
+    public boolean ComprobarRecursos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Entrenar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Atacar(int vidaEnemiga) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Defender(int vidaAliada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void EntrenarSegador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AtacarSegador(int vidaEnemiga) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DefenderSegador(int vidaEnemiga) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
