@@ -40,8 +40,6 @@ public class Serafin implements InterfazCaballeros {
         return null;
     }
 
-    
-
     @Override
     public Serafin CrearSerafin() {
         //AQUI VA EL CODIGO PARA CREAR A LOS CABALLEROS
@@ -199,6 +197,11 @@ public class Serafin implements InterfazCaballeros {
 
     @Override
     public void Defender(int vidaAliada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean ComprobarRecursos(int a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
