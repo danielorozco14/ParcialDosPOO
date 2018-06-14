@@ -6,6 +6,7 @@
 package danielorozco.world;
 
 import caballerosdesangre.InterfazCaballeros;
+import caballerosdesangre.edificios.InterfazEdificiosCaballeros;
 import necromantes.InterfazNecromantes;
 import orcos.InterfazOrcos;
 
@@ -17,4 +18,6 @@ public interface AbstractFactory {
     InterfazCaballeros getCaballero(int type);
     InterfazOrcos getOrcos(int type);
     InterfazNecromantes getNecromantes(int type);
+    InterfazEdificiosCaballeros getEdificios(int type);
+    
 }
