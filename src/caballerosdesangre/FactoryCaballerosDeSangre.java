@@ -5,6 +5,7 @@
  */
 package caballerosdesangre;
 
+import caballerosdesangre.edificios.InterfazEdificiosCaballeros;
 import danielorozco.world.AbstractFactory;
 import java.util.Scanner;
 import necromantes.InterfazNecromantes;
@@ -58,6 +59,11 @@ public class FactoryCaballerosDeSangre implements AbstractFactory {
     @Override
     public InterfazNecromantes getNecromantes(int type) {
             return null;
+    }
+
+    @Override
+    public InterfazEdificiosCaballeros getEdificios(int type) {
+        return null;
     }
     
 }

@@ -17,9 +17,9 @@ public class Recursos implements InterfazCaballeros {
     private static ArrayList<Integer> RecursosOrbes;
     private static ArrayList<Integer> RecursosOro;
 
-    private static int cantidadMadera=0;
-    private static int cantidadOrbes=0;
-    private static int cantidadOro=0;
+    private static int cantidadMadera=5000;
+    private static int cantidadOrbes=10000;
+    private static int cantidadOro=3000;
 
     public int getCantidadMadera() {
         return cantidadMadera;
