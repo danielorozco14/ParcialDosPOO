@@ -72,19 +72,7 @@ public class Caballeros implements InterfazCaballeros {
 
     @Override
     public void RecolectarCaballero(Caballeros caballero) {
-        if (caballero instanceof Caballeros) {
-            System.out.println("RECOLECTANDO MILICIA!!");
-            for (int i = 1; i <= 5; i++) {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-
-                }
-            }
-            AlmacenCaballeros.add(caballero);
-        } else {
-            System.out.println("Aun no se han creado Caballeros para poder recolectar");
-        }
+        //EL PAQUETE DE EDIFICIOS IMPLEMENTARA ESTA INTERFAZ Y HARA LAS LABORES DE RECOLECCION DE RECURSOS
     }
 
     @Override
@@ -193,6 +181,11 @@ public class Caballeros implements InterfazCaballeros {
 
     @Override
     public void RecolectarSerafin(Serafin serafin) {
+    }
+
+    @Override
+    public boolean ComprobarRecursos(int a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
