@@ -6,6 +6,7 @@
 package orcos;
 
 import caballerosdesangre.InterfazCaballeros;
+import caballerosdesangre.edificios.InterfazEdificiosCaballeros;
 import danielorozco.world.AbstractFactory;
 import necromantes.InterfazNecromantes;
 
@@ -41,6 +42,11 @@ public class FactoryOrcos implements AbstractFactory {
     @Override
     public InterfazNecromantes getNecromantes(int type) {
         return null;
+    }
+
+    @Override
+    public InterfazEdificiosCaballeros getEdificios(int type) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
