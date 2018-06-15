@@ -16,6 +16,15 @@ public class EdificioMadera implements InterfazEdificiosCaballeros {
     private int costoConstruccion= 1600;
     private ArrayList <EdificioMadera>  AlmacenEdificio;
 
+    public int getVidaEdificioMadera() {
+        return vidaEdificioMadera;
+    }
+
+    public void setVidaEdificioMadera(int vidaEdificioMadera) {
+        this.vidaEdificioMadera = vidaEdificioMadera;
+    }
+
+    
     public int getCostoConstruccion() {
         return costoConstruccion;
     }
