@@ -70,7 +70,8 @@ public class CentroMandoCaballeros {
         String nom1 = (menu.getNomJugador1());
 
         System.out.println("\t\t******** CENTRO DE MANDO CABALLEROS DE SANGRE ***********");
-        System.out.println("\t\t---------- HP Centro de Mando =" + getVidaHQ() + " -----------");
+        System.out.println("\t\t---------- HP Centro de Mando: " + getVidaHQ() + " -----------");
+        System.out.println("\t**** Cantidad Oro: "+tipoRecurso.getCantidadOro()+" Cantidad Orbes: "+tipoRecurso.getCantidadOrbes() + " Cantidad Madera: "+tipoRecurso.getCantidadMadera()+"****");
         System.out.println("---------------------------------------------------------------------");
         System.out.println("|\t\t 1. Creacion de Milicia                             |");
         System.out.println("|\t\t 2. Creacion de Recursos                            |");
@@ -78,8 +79,8 @@ public class CentroMandoCaballeros {
         System.out.println("|\t\t 4. Creacion de Edificios                           |");
         System.out.println("|\t\t 5. Recolectar Vehiculos                            |");
         System.out.println("|\t\t 6. Recolectar Recursos                             |");
-        System.out.println("|\t\t---------------------------------------");
-        System.out.println("|\t\t 7. Entrenar Territorio Enemigo                       |");
+        System.out.println("|\t---------------------------------------------               |");
+        System.out.println("|\t\t 7. Entrenar Territorio Enemigo                     |");
         System.out.println("|\t\t 8. Atacar Territorio Enemigo                       |");
         System.out.println("|\t\t 9. Defender Ataque Enemigo                         |");
         System.out.println("----------------------------------------------------------------------");
