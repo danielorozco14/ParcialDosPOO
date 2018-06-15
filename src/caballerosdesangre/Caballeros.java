@@ -7,6 +7,7 @@ package caballerosdesangre;
 
 import caballerosdesangre.edificios.EdificioMadera;
 import caballerosdesangre.edificios.EdificioOrbes;
+import caballerosdesangre.edificios.EdificioOro;
 import danielorozco.world.FactoryProducer;
 import danielorozco.world.Juego;
 import danielorozco.world.MenuJuego;
@@ -115,7 +116,10 @@ public class Caballeros implements InterfazCaballeros {
                 vidaEdificio.setVidaEdificioMadera(vidaEdificio.getVidaEdificioMadera()-puntosAtaque);
             }else if(menuJuego.getOpcionRaza2()==2){
                 EdificioOrbes vidaEdificio = new EdificioOrbes();
-                
+                vidaEdificio.setVidaEdificioOrbes(vidaEdificio.getVidaEdificioOrbes()-puntosAtaque);
+            }else if(menuJuego.getOpcionRaza2()==3){
+                EdificioOro vidaEdificio = new EdificioOro();
+                vidaEdificio.setVidaEdificioOro(vidaEdificio.getVidaEdificioOro()-puntosAtaque);
             }
 
         } else {
