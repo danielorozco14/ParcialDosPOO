@@ -5,6 +5,11 @@
  */
 package caballerosdesangre;
 
+import caballerosdesangre.edificios.EdificioMadera;
+import caballerosdesangre.edificios.EdificioOrbes;
+import danielorozco.world.FactoryProducer;
+import danielorozco.world.Juego;
+import danielorozco.world.MenuJuego;
 import java.util.ArrayList;
 
 /**
@@ -78,7 +83,7 @@ public class Caballeros implements InterfazCaballeros {
     public void Entrenar() {
         //AQUI VA EL CODIGO PARA ENTRENAR A LOS CABALLEROS ALMACENADOS EN LA 
         //EDIFICACION CORRESPONDIENTE
-        if(ComprobarObjetos()){
+        if (ComprobarObjetos()) {
             System.out.println("Se ha seleccionado una unidad de caballeros,"
                     + "se procedera a entrenarlos y ponerlos en el arrayList");
             System.out.println("UNIDAD DE CABALLEROS EN ENTRENAMIENTO");
@@ -101,25 +106,32 @@ public class Caballeros implements InterfazCaballeros {
     @Override
     public void Atacar(int vidaEnemiga) {
         System.out.println("ATACANDO TERRITORIO ENEMIGO!!");
-        if(ComprobarObjetos()){
-            //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
+        if (ComprobarObjetos()) {
             System.out.println("Unidad de caballeros Atacando!!!");
-            //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
-        }else{
+            Juego obtenerDatos = new Juego();
+            MenuJuego menuJuego = new MenuJuego();
+            if (menuJuego.getOpcionRaza2() == 1) {
+                EdificioMadera vidaEdificio = new EdificioMadera();
+                vidaEdificio.setVidaEdificioMadera(vidaEdificio.getVidaEdificioMadera()-puntosAtaque);
+            }else if(menuJuego.getOpcionRaza2()==2){
+                EdificioOrbes vidaEdificio = new EdificioOrbes();
+                
+            }
+
+        } else {
             System.out.println("No se han creado Caballeros");
         }
-        
+
     }
 
     @Override
     public void Defender(int vidaAliada) {
         System.out.println("Unidad de caballeros Defendiendo!!!");
-        if(ComprobarObjetos()){
+        if (ComprobarObjetos()) {
             //Obtener del arraylist de caballeros, un caballero y enviarlo a atacar
             System.out.println("Unidad de caballeros Defendiendo!!!");
             //setVidaEnemiga= vidaEnemiga - getPuntosAtaque();
         }
-      
 
     }
 
