@@ -111,15 +111,27 @@ public class Caballeros implements InterfazCaballeros {
             System.out.println("Unidad de caballeros Atacando!!!");
             Juego obtenerDatos = new Juego();
             MenuJuego menuJuego = new MenuJuego();
-            if (menuJuego.getOpcionRaza2() == 1) {
-                EdificioMadera vidaEdificio = new EdificioMadera();
-                vidaEdificio.setVidaEdificioMadera(vidaEdificio.getVidaEdificioMadera()-puntosAtaque);
-            }else if(menuJuego.getOpcionRaza2()==2){
-                EdificioOrbes vidaEdificio = new EdificioOrbes();
-                vidaEdificio.setVidaEdificioOrbes(vidaEdificio.getVidaEdificioOrbes()-puntosAtaque);
-            }else if(menuJuego.getOpcionRaza2()==3){
-                EdificioOro vidaEdificio = new EdificioOro();
-                vidaEdificio.setVidaEdificioOro(vidaEdificio.getVidaEdificioOro()-puntosAtaque);
+            switch (menuJuego.getOpcionRaza2()) {
+                case 1:
+                    {
+                        EdificioMadera vidaEdificio = new EdificioMadera();
+                        vidaEdificio.setVidaEdificioMadera(vidaEdificio.getVidaEdificioMadera()-puntosAtaque);
+                        break;
+                    }
+                case 2:
+                    {
+                        EdificioOrbes vidaEdificio = new EdificioOrbes();
+                        vidaEdificio.setVidaEdificioOrbes(vidaEdificio.getVidaEdificioOrbes()-puntosAtaque);
+                        break;
+                    }
+                case 3:
+                    {
+                        EdificioOro vidaEdificio = new EdificioOro();
+                        vidaEdificio.setVidaEdificioOro(vidaEdificio.getVidaEdificioOro()-puntosAtaque);
+                        break;
+                    }
+                default:
+                    break;
             }
 
         } else {
