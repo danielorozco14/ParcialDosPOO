@@ -63,15 +63,15 @@ public class Recursos implements InterfazCaballeros {
         switch (a) {
             case 1:
                 System.out.println("Creando recursos de madera");
-                setCantidadMadera(cantidadMadera+15);
+                setCantidadMadera(cantidadMadera+35);
                 break;
             case 2:
                 System.out.println("Creando recursos de Orbes");
-                setCantidadOrbes(cantidadOrbes+15);
+                setCantidadOrbes(cantidadOrbes+35);
                 break;
             case 3:
                 System.out.println("Creando recursos de oro");
-                setCantidadOro(cantidadOro+15);
+                setCantidadOro(cantidadOro+35);
                 break;
             default:
                 System.out.println("No se ha seleccionado nada valido");

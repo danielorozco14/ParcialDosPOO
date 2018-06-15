@@ -58,6 +58,7 @@ public class CentroMandoNecromante {
         String nom1 = (menu.getNomJugador1());
         System.out.println("\t\t******** CENTRO DE MANDO NECROMANTES ***********");
         System.out.println("\t\t---------- HP Centro de Mando =" + getVidaHQ() + " -----------");
+        System.out.println("\t**** Cantidad Huesos: "+tipoRecurso.getCantidadHuesos()+" Cantidad Almas: "+tipoRecurso.getCantidadAlmas() + " Cantidad Cristal: "+tipoRecurso.getCantidadCristal()+"****");
         System.out.println("---------------------------------------------------------------------");
         System.out.println("|\t\t 1. Creacion de Milicia                             |");
         System.out.println("|\t\t 2. Creacion de Recursos                            |");
@@ -85,12 +86,12 @@ public class CentroMandoNecromante {
                 int type = opciones1.nextInt();
                 switch (type) {
                     case 1:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                         InterfazNecromantes necromante = factory.getNecromantes(1);
                         necromante.Crear();
                         break;
                     case 2:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                         necromante = factory.getNecromantes(2);
                         necromante.CrearSegador();
                         break;
@@ -100,7 +101,7 @@ public class CentroMandoNecromante {
                 break;
 
             case 2:
-                factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                 InterfazNecromantes necromantes;
                 System.out.println("Que recursos desea crear?");
                 System.out.println("1.Huesos");
@@ -120,22 +121,23 @@ public class CentroMandoNecromante {
                 break;
             case 6:
                 System.out.println("Que recurso desea recolectar?");
-                System.out.println("1.Huesos");
-                System.out.println("2.Cristal");
+                System.out.println("1.Cristal");
+                System.out.println("2.Huesos");
                 System.out.println("3.Almas");
                 switch (opciones1.nextInt()) {
                     case 1:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
+                        necromantes = factory.getNecromantes(3);
+                        necromantes.RecolectarCristales(15);
+                        
+                        break;
+                    case 2:
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                         necromantes = factory.getNecromantes(3);
                         necromantes.RecolectarHuesos(15);
                         break;
-                    case 2:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                        necromantes = factory.getNecromantes(3);
-                        necromantes.RecolectarCristales(15);
-                        break;
                     case 3:
-                        factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                        factory = FactoryProducer.getFactory(menu.getOpcionRaza2());
                         necromantes = factory.getNecromantes(3);
                         necromantes.RecolectarAlmas(15);
                         break;

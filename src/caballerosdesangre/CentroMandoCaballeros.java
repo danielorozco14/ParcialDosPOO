@@ -200,12 +200,26 @@ public class CentroMandoCaballeros {
                                     caballero.Atacar(vidaEdificio.getVidaEdificioMadera());
 
                                 }else if(menuJuego.getOpcionRaza2()==2){
-                                    
+                                    factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                                    caballero = factory.getCaballero(1);
+                                    EdificioMadera vidaEdificio = new EdificioMadera();
+                                    caballero.Atacar(vidaEdificio.getVidaEdificioMadera());
                                 }
-                                factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
-                                caballero = factory.getCaballero(3);
-                                caballero.Atacar(300);
                                 break;
+                            }else if(tipoAtaque==2){
+                                if (menuJuego.getOpcionRaza2() == 1) {
+                                    factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                                    caballero = factory.getCaballero(1);
+                                    EdificioMadera vidaEdificio = new EdificioMadera();
+                                    caballero.Atacar(vidaEdificio.getVidaEdificioMadera());
+
+                                }else if(menuJuego.getOpcionRaza2()==2){
+                                    factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
+                                    caballero = factory.getCaballero(1);
+                                    EdificioMadera vidaEdificio = new EdificioMadera();
+                                    caballero.Atacar(vidaEdificio.getVidaEdificioMadera());
+                                }
+                                
                             }
                             
                     case 2:

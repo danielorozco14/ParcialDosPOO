@@ -77,13 +77,16 @@ public class Recursos implements InterfazNecromantes {
     public void CrearRecursos(int a) {
         switch (a) {
             case 1:
-                setCantidadCristal(cantidadCristal+15);
+                System.out.println("Creando recursos de cristal");
+                setCantidadCristal(cantidadCristal+35);
                 break;
             case 2:
-                setCantidadHuesos(cantidadHuesos+15);
+                System.out.println("Creando recursos de huesos");
+                setCantidadHuesos(cantidadHuesos+35);
                 break;
             case 3:
-                setCantidadAlmas(cantidadAlmas+15);
+                System.out.println("Creando recursos de almas");
+                setCantidadAlmas(cantidadAlmas+35);
                 break;
             default:
                 System.out.println("No se ha seleccionado nada valido");
