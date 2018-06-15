@@ -282,7 +282,7 @@ public class CentroMandoCaballeros {
                     case 1:
                         //factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
                         caballero = factory.getCaballero(1);
-                        caballero.Defender();
+                        //caballero.Defender();
                         break;
                     case 2:
                         factory = FactoryProducer.getFactory(menu.getOpcionRaza1());
